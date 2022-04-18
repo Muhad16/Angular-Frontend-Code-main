@@ -1,0 +1,43 @@
+<p>restaurant-details works!</p>
+<div class="card">
+    <div class="card-title">
+        <h4>Personal Details</h4>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Restaurant Id</th>
+                    <td>{{restaurantId}}</td>
+                </tr>
+                <tr>
+                    <th>First Name</th>
+                    <td>{{restaurant.firstName}}</td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td>{{restaurant.lastName}}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{restaurant.email}}</td>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <td>{{restaurant.username}}</td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td>{{restaurant.password}}</td>
+                </tr>
+                <tr>
+                    <th>Food Specialization</th>
+                    <td>{{restaurant.foodSpecialization}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" type="button" (click)="goUpdate()">Edit</button>
+        &nbsp;&nbsp;&nbsp;
+        <button class="btn btn-primary" (click)="backToPortal()">Back to Portal</button>
+
+</div>

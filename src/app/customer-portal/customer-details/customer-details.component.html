@@ -1,5 +1,18 @@
-<p>customer-details works!</p>
-<div class="card">
+<head>
+    <style>
+        .card{
+            background-image: url(/assets/fork.jpg);
+            background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .fetch{
+            font: 30px poppins;
+            color: rgb(241, 115, 12);
+            font-weight: 600;
+        }
+    </style>
+</head><div class="card">
     <div class="card-title">
         <h4>Personal Details</h4>
     </div>
@@ -8,31 +21,31 @@
             <tbody>
                 <tr>
                     <th>Customer Id</th>
-                    <td>{{custId}}</td>
+                    <td class="fetch">{{custId}}</td>
                 </tr>
                 <tr>
                     <th>First Name</th>
-                    <td>{{customer.firstName}}</td>
+                    <td class="fetch">{{customer.firstName}}</td>
                 </tr>
                 <tr>
                     <th>Last Name</th>
-                    <td>{{customer.lastName}}</td>
+                    <td class="fetch">{{customer.lastName}}</td>
                 </tr>
                 <tr>
                     <th>Email</th>
-                    <td>{{customer.email}}</td>
+                    <td class="fetch">{{customer.email}}</td>
                 </tr>
                 <tr>
                     <th>Username</th>
-                    <td>{{customer.username}}</td>
+                    <td class="fetch">{{customer.username}}</td>
                 </tr>
                 <tr>
                     <th>Password</th>
-                    <td>{{customer.password}}</td>
+                    <td class="fetch">{{customer.password}}</td>
                 </tr>
                 <tr>
                     <th>Wallet Balance</th>
-                    <td>{{customer.balance}}</td>
+                    <td class="fetch">{{customer.balance}}</td>
                 </tr>
             </tbody>
         </table>

@@ -1,4 +1,18 @@
-<p>place-order works!</p>
+<head>
+    <style>
+        .card-body{
+            background-color: black;
+            color: white;
+        }
+        .card-footer{
+            background-color: yellow;
+        }
+        #col{
+            position: relative;
+            top: 75px;
+        }
+    </style>
+</head>
 <div>
     <button type="button" class="btn btn-primary" (click)="backToPortal()">Back To Portal</button>
 </div>
@@ -30,20 +44,20 @@
         </div>
     </div>
     
-    <div class="col-md-6">
+    <div class="col-md-6" id="col">
         <h2>Your Order: </h2>
         <div class="card">
             <div class="card-body">
                 <table class="table">
                     <thead>
-                        <tr>
+                        <tr class="card-body">
                             <th>Name</th>
                             <th>Quantity</th>
                             <th>Subtotal</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let order of selectedItem">
+                        <tr class="card-body" *ngFor="let order of selectedItem">
                             <td>{{order.item.itemName}}</td>
                             <td>{{order.quantity}}</td>
                             <td>{{order.item.itemPrice * order.quantity}}</td>

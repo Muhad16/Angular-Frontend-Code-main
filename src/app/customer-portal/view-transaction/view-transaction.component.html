@@ -1,12 +1,36 @@
-<p>view-transaction works!</p>
+<head>
+    <style>
+        .card{
+            background-image: url(/assets/transaction2.jpg);
+            background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .font{
+            color: white;
+            font-weight: 600;
+        }
+        .card-title{
+            font-weight: 600;
+            color: rgb(241, 10, 10);
+            position: relative;
+            left: 10px;
+            top: 10px;
+           
+        }
+        .size{
+            font-size: 40px;
+        }
+    </style>
+</head>
 <div class="card">
     <div class="card-title">
-        <h4>Transactions</h4>
+        <h4 class="size">Transactions</h4>
     </div>
     <div class="card-body">
         <table class="table table-striped">
             <thead>
-                <tr>
+                <tr class="font">
                     <th>Order Id</th>
                     <th>Total Amount</th>
                     <th>Status</th>
@@ -15,10 +39,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let order of currentCustomerOrders">
+                <tr class="font" *ngFor="let order of currentCustomerOrders">
                     <td>{{order.orderId}}</td>
                     <td>${{order.amount}}</td>
-                    <td [ngStyle]="{'color': getColor(order.status)}">{{order.status}}</td>
+                    <td >{{order.status}}</td>
                     <td>{{order.orderDate| date: 'medium'}}</td>
                     <td>
                         <button mdbBtn class="btn btn-primary" type="button" data-toggle="modal" data-target="#seeDetails" (click)="getDetails(order.orderId)">See Details</button>    

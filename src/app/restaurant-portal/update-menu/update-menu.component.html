@@ -1,4 +1,18 @@
-<p>update-menu works!</p>
+<head>
+    <style>
+        .card{
+            background-image: url(/assets/transaction.jpg);
+            background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .item{
+            font: 30px poppins;
+            color: rgb(11, 6, 32);
+            font-weight: 600;
+        }
+    </style>
+</head>
 <div>
     <button type="button" class="btn btn-primary" (click)="backToPortal()">Back To Portal</button>
     &nbsp;&nbsp;&nbsp;&nbsp;
@@ -23,7 +37,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of menu">
+                    <tr class="item" *ngFor="let item of menu">
                         <td>{{item.itemId}}</td>
                         <td>{{item.itemName}}</td>
                         <td>{{item.itemPrice}}</td>

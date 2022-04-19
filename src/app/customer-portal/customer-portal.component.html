@@ -1,4 +1,46 @@
-<p>customer-portal works!</p>
+<head>
+    <style>
+        .btn-group-vertical{
+            font-size: 30px;
+            position: relative;
+            left: 25%;
+            top: -30px;
+            /* background-color: rgb(43, 5, 48); */
+            background-color:  rgba(53, 5, 39, 0.767);
+            /* background-color: #000000; */
+        }
+        .card{
+            background-image: url(/assets/wall.jpg);
+            background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .card-subtitle{
+            position: relative;
+            left: 25%;
+            top: -10px;
+            color: rgb(217, 255, 0);
+            font-size: 40px;
+        }
+        .card-title{
+            position: relative;
+            left: 25%;
+            color: rgb(240, 6, 6);
+        }
+        .card-body{
+            color: white;
+            position: relative;
+            left: 25%;
+        }
+        .option{
+            position: relative;
+            left: 25%;
+            color: white;
+            font-size: 25px;
+            top: -30px;
+        }
+    </style>
+</head>
 <div class="card" *ngIf="customer.numberOfOrders == 0 && coupons.length == 0">
     <div class="card-body">
         <h4>Coupon for New Users</h4>
@@ -17,8 +59,8 @@
     <div class="card-subtitle">
         <p>Your current balance: {{customer.balance}}</p>
     </div>
-    <div class="card-body">
-        <p>Select an option below: </p>
+    <div class="card-body1">
+        <p class="option">Select an option below: </p>
         <div class="btn-group-vertical">
             <a routerLink="/customer/{{custId}}/details">Personal Information</a>
             <a routerLink="/customer/{{custId}}/transaction">View Transaction</a>
